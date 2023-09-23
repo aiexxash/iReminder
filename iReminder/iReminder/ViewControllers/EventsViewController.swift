@@ -9,6 +9,7 @@ import UIKit
 
 class EventsViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     @IBOutlet weak var table: UICollectionView!
+    var userEmail: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
