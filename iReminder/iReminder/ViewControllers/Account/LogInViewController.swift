@@ -40,7 +40,7 @@ class LogInViewController: UIViewController {
         }
     }
     @IBAction func createButtonClicked(_ sender: UIButton) {
-        let signUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+        let signUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
         self.navigationController?.pushViewController(signUpVC, animated: true)
     }
 }
