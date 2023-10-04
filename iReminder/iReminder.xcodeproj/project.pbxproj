@@ -30,6 +30,8 @@
 		707872E62ABF583D00BEECB2 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707872E52ABF583D00BEECB2 /* LogInViewController.swift */; };
 		707872E82ABF585000BEECB2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707872E72ABF585000BEECB2 /* SignUpViewController.swift */; };
 		707872EA2ABF5E5C00BEECB2 /* Helping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707872E92ABF5E5C00BEECB2 /* Helping.swift */; };
+		70BC7A7E2ACC8EAE00981DC4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BC7A7D2ACC8EAE00981DC4 /* Request.swift */; };
+		70BC7A812ACC8F7100981DC4 /* EventsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BC7A802ACC8F7100981DC4 /* EventsCollectionViewCell.swift */; };
 		70D445262ABCBE1500702121 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D445252ABCBE1500702121 /* AppDelegate.swift */; };
 		70D445282ABCBE1500702121 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D445272ABCBE1500702121 /* SceneDelegate.swift */; };
 		70D4452A2ABCBE1500702121 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D445292ABCBE1500702121 /* EventsViewController.swift */; };
@@ -65,6 +67,8 @@
 		707872E52ABF583D00BEECB2 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		707872E72ABF585000BEECB2 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		707872E92ABF5E5C00BEECB2 /* Helping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helping.swift; sourceTree = "<group>"; };
+		70BC7A7D2ACC8EAE00981DC4 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		70BC7A802ACC8F7100981DC4 /* EventsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCollectionViewCell.swift; sourceTree = "<group>"; };
 		70D445222ABCBE1500702121 /* iReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70D445252ABCBE1500702121 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70D445272ABCBE1500702121 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +133,25 @@
 			path = Account;
 			sourceTree = "<group>";
 		};
+		70BC7A7C2ACC8E9C00981DC4 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				704F08CB2AC9A4B2005F93E9 /* GoogleService-Info.plist */,
+				70BC7A7D2ACC8EAE00981DC4 /* Request.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		70BC7A7F2ACC8F2600981DC4 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				70D4455E2ABCCC2100702121 /* CreateEventViewController.swift */,
+				70D445292ABCBE1500702121 /* EventsViewController.swift */,
+				70BC7A802ACC8F7100981DC4 /* EventsCollectionViewCell.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
 		70D445192ABCBE1500702121 = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +175,7 @@
 		70D445242ABCBE1500702121 /* iReminder */ = {
 			isa = PBXGroup;
 			children = (
-				704F08CB2AC9A4B2005F93E9 /* GoogleService-Info.plist */,
+				70BC7A7C2ACC8E9C00981DC4 /* Firebase */,
 				70D445332ABCBE1600702121 /* Info.plist */,
 				70D445562ABCC03600702121 /* ViewControllers */,
 				70D4455B2ABCC08C00702121 /* Storyboards */,
@@ -192,10 +215,9 @@
 		70D445562ABCC03600702121 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				707872E22ABF57EF00BEECB2 /* Account */,
-				70D445292ABCBE1500702121 /* EventsViewController.swift */,
-				70D4455E2ABCCC2100702121 /* CreateEventViewController.swift */,
 				704F08CF2AC9B39F005F93E9 /* TabBarController.swift */,
+				70BC7A7F2ACC8F2600981DC4 /* Events */,
+				707872E22ABF57EF00BEECB2 /* Account */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -383,10 +405,12 @@
 				707872E82ABF585000BEECB2 /* SignUpViewController.swift in Sources */,
 				707872EA2ABF5E5C00BEECB2 /* Helping.swift in Sources */,
 				70D4452A2ABCBE1500702121 /* EventsViewController.swift in Sources */,
+				70BC7A812ACC8F7100981DC4 /* EventsCollectionViewCell.swift in Sources */,
 				704F08D02AC9B39F005F93E9 /* TabBarController.swift in Sources */,
 				70D445262ABCBE1500702121 /* AppDelegate.swift in Sources */,
 				70D445282ABCBE1500702121 /* SceneDelegate.swift in Sources */,
 				707872E62ABF583D00BEECB2 /* LogInViewController.swift in Sources */,
+				70BC7A7E2ACC8EAE00981DC4 /* Request.swift in Sources */,
 				70D4455F2ABCCC2100702121 /* CreateEventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,12 +8,17 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    let defaults = UserDefaults.standard
     
     static var logInError: String? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        guard defaults.string(forKey: "email") == nil else {
+            let destVC = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "TabBarController") as!TabBarController
+            self.navigationController?.setViewControllers([destVC], animated: true)
+            return
+        }
         // Do any additional setup after loading the view.
     }
     @IBAction func submitButtonClicked(_ sender: UIButton) {
@@ -33,14 +38,13 @@ class LogInViewController: UIViewController {
             Helping.showError(text: error!.localizedDescription, label: self.errorLabel, textFields: [self.emailTextField, self.passwordTextField])
         }
         else {
-            let destVC = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "EventsViewController") as!EventsViewController
-            destVC.userEmail = self.emailTextField.text
+            let destVC = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "TabBarController") as!TabBarController
             self.navigationController?.setViewControllers([destVC], animated: true)
             }
         }
     }
     @IBAction func createButtonClicked(_ sender: UIButton) {
-        let signUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
+        let signUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
         self.navigationController?.pushViewController(signUpVC, animated: true)
     }
 }

@@ -9,6 +9,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +42,9 @@ class SignUpViewController: UIViewController {
                 let ac = UIAlertController(title: "Success", message: "Your account was successfuly created and now you are free to use it.", preferredStyle: .alert)
                 ac.addAction(UIAlertAction(title: "OK", style: .default){_ in
                     let destVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
-                    destVC.userEmail = email
                     self.navigationController?.setViewControllers([destVC], animated: true)
+                    
+                    self.defaults.set(self.emailTextField.text!, forKey: "email")
                 })
                 self.present(ac, animated: true)
             }
