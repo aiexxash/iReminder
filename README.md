@@ -3,8 +3,6 @@
 
 <br />
 <p align="center">
-    <br />
-    <br />
     <b>iReminder is an iOS app for remember important things. Built with the open source community and optimized for developer experience in the coding languages you love.</b>
     <br />
     <br />
