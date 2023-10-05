@@ -2,7 +2,7 @@
 
 <br />
 <p align="center">
-    <img height="234" src="https://github.com/ialexballa/iReminder/blob/main/img/iReminder-banner.png" alt="Banner">
+    <img height="100" src="https://github.com/ialexballa/iReminder/blob/main/img/iReminder-banner.png" alt="Banner">
     <br />
     <br />
     <b>iReminder is an iOS app for remember important things. Built with the open source community and optimized for developer experience in the coding languages you love.</b>
