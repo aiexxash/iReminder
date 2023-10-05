@@ -1,3 +1,4 @@
+[![Built With Love](https://img.shields.io/badge/Built-With%20Love-red)](https://appwrite.io/company/careers)
 > Great news! iReminder is now in public beta! Join us today! ☁️🎉
 
 <br />
@@ -9,5 +10,3 @@
     <br />
     <br />
 </p>
-
-[![Built With Love](https://img.shields.io/badge/Built-With%20Love-red)](https://appwrite.io/company/careers)
