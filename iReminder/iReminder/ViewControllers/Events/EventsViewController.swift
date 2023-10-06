@@ -20,6 +20,7 @@ class EventsViewController: UIViewController, UICollectionViewDelegateFlowLayout
         
         title = "Events"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", image: UIImage(systemName: "plus.circle.fill"), target: self, action: #selector(addEventPressed))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Reload", image: UIImage(systemName: "goforward"), target: self, action: #selector(reloadButtonPressed))
         
         var config  = UIButton.Configuration.gray()
         
@@ -38,6 +39,10 @@ class EventsViewController: UIViewController, UICollectionViewDelegateFlowLayout
     }
     
     // ----------------------------- FUNCTIONS -----------------------------
+    
+    @objc func reloadButtonPressed(){
+        
+    }
     
     @objc func addEventPressed(){
         let createEventVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CreateEventViewController") as! CreateEventViewController
@@ -102,7 +107,7 @@ class EventsViewController: UIViewController, UICollectionViewDelegateFlowLayout
     }
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width, height: 130)
+        return CGSize(width: collectionView.bounds.width, height: 135)
     }
 }
 
